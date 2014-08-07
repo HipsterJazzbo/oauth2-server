@@ -208,6 +208,17 @@ class Authorization
     }
 
     /**
+     * Get an exception status code
+     *
+     * @param  string $error The error message key
+     * @return string        The status code
+     */
+    public static function getExceptionMessage($error = '')
+    {
+        return self::$exceptionHttpStatusCodes[$error];
+    }
+
+    /**
      * Get an exception code
      *
      * @param  integer $code The exception code
